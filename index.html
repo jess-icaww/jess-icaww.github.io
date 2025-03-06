@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jessica Wong</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav id="desktop-nav">
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="https://drive.google.com/file/d/1mDBKJtGjjHLGwCkjqGemP_SfZcEsa19m/view?usp=sharing"
+                        target="_blank">Resume</a></li>
+                <li><a href="mailto:jess.icaww0906@gmail.com">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation Bar -->
+    <nav id="mobile-nav">
+        <div class="menu-icon" onclick="toggleMenu()">
+            &#9776;
+        </div>
+        <div class="mobile-links">
+            <li><a href="./index.html">About</a></li>
+            <li><a href="./work.html">Work</a></li>
+            <li><a href="https://drive.google.com/file/d/1mDBKJtGjjHLGwCkjqGemP_SfZcEsa19m/view?usp=sharing"
+                    target="_blank">Resume</a></li>
+            <li><a href="mailto:jess.icaww0906@gmail.com">Contact</a></li>
+            </ul>
+    </nav>
+
+    <!-- Hero Section-->
+    <div class="hero-container">
+        <div class="img-container">
+            <img src="./imgs/me.png" alt="" id="hero-img">
+        </div>
+        <div class="hero-text">
+            <h1>Hi, I'm Jessica!</h1>
+            <p>Fascinated by technology and its endless possibilities,
+                <br> my curiousity drives me to learn, innovate, and contribute however I can.
+            </p>
+            <button onclick="window.location.href='#work'">View My Work</button>
+        </div>
+    </div>
+
+    <!-- About Me Section -->
+    <div class="about-me" id="about">
+        <h1>About Me</h1>
+        <div class="about-me-text">
+            <p>Even as a child, I loved to learn. Whether it was memorizing magic tricks on Youtube, or making a whole cardboard arcade in my basement, I had a 
+                knack for trying out new things. I not only realized how far a brain and two hands could get me, but how beautiful, enriching, and transformative
+                 it was for me to <u>try,</u> no matter how many times it took me.</p>
+            <p>If you were wondering where my love for technology comes from, you're gonna have to keep reading. 
+                Long story short, I used to be obsessed with playing video games. It was one of my biggest insecurities,
+                but I realize how it interestingly enough, has turned into one of my biggest blessings. 
+                Why?
+                Well... my love for the specific game, Minecraft, caused me to play nonstop. I eventually got
+                really good at the game, broke a few world records, won competitive tournaments here and there,
+                and decided to upload a few videos on my gameplay.
+                Sooner or later, I started gaining traction and decided I wanted to take Youtube seriously. I self-taught
+                myself different video and photo editing software, and ended up gaining over 200,000 subscribers on Youtube
+                and 40,000 followers on Twitch.
+            </p>
+            <p>Cultivating an online community and bearing it's various responsibilities has taught me about the importance of
+                skills like communication, storytelling, adaptability, collaboration, time-management,
+            problem-solving, and creativity. But even more than this, I gained a reason and a purpose to use technology in hopes to
+            provide value to people. Whether it's creating videos to writing code, I'm passionate about exploring tech and contributing
+            in any way I can.
+        </p>
+        </div>
+    </div>
+
+    <!-- Other Section -->
+    <div class="card-area">
+        <h2>Where else can you find me?</h2>
+        <div class="wrapper">
+            <div class="box-area">
+                <div class="card-container">
+                    <!-- Card 1 -->
+                    <div class="box">
+                        <img src="./imgs/vietnam.png" alt="Picture in Vietnam">
+                        <div class="overlay">
+                            <p>So far, I've been to Korea, Vietnam, Japan, and the Dominican Republic!</p>
+                        </div>
+                    </div>
+                    <h5>Traveling!</h5>
+                </div>
+                <div class="card-container">
+                    <!-- Card 2 -->
+                    <div class="box">
+                        <img src="./imgs/ball.png" alt="Picture playing basketball">
+                        <div class="overlay">
+                            <p>I started playing basketball in middle school and still play from time to time!
+                                <br>(P.S. I learned my handles from Youtube...)
+                            </p>
+                        </div>
+                    </div>
+                    <h5>Playing ball!</h5>
+                </div>
+                <!-- Card 3 -->
+                <div class="card-container">
+                    <div class="box">
+                        <img src="./imgs/church.png" alt="Picture at church">
+                        <div class="overlay">
+                            <p>This is one of my favorite places to be! I love my church community and am beyond grateful for them.</p>
+                        </div>
+                    </div>
+                    <h5>At church!</h5>
+                </div>
+                <!-- Card 4 -->
+                <div class="card-container">
+                    <div class="box">
+                        <img src="./imgs/canes.png" alt="Picture holding Raising Cane's">
+                        <div class="overlay">
+                            <p>I discovered Raising Cane's in 2021 when visiting my friends in Cali.
+                                We had it 4 times that week, and since then, life has never been the same.</p>
+                        </div>
+                    </div>
+                    <h5>Eating Canes!</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+        <!-- Skills Section -->
+        <div class="skills" id="work">
+            <h1>Skills</h1>
+            <div class="skills-container-container">
+                <div class="left-side">
+                    <div class="skills-container">
+                        <h3>Video Editing</h3>
+                        <div class="icon-container">
+                            <div class="icon">
+                                <img src="./imgs/adobe-premiere-pro-icon.svg" alt="Premiere Pro" width="50px">
+                                <p>Adobe Premiere Pro</p>
+                            </div>
+                            <div class="icon">
+                                <img src="./imgs/sony-vegas-logo-icon.svg" alt="VEGAS Pro" width="50px">
+                                <p>VEGAS Pro</p>
+                            </div>
+                            <div class="icon">
+                                <img src="./imgs/icons8-davinci-resolve.svg" alt="DaVinci Resolve" width="50px"
+                                    id="davinci">
+                                <p>DaVinci Resolve</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skills-container">
+                        <h3>Photo Editing</h3>
+                        <div class="icon-container">
+                            <div class="icon">
+                                <img src="./imgs/canva-icon.svg" alt="Canva" width="50px">
+                                <p>Canva</p>
+                            </div>
+                            <div class="icon">
+                                <img src="./imgs/adobe-photoshop-icon.svg" alt="Adobe Photoshop" width="50px">
+                                <p>Adobe Photoshop</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-side">
+                    <div class="skills-container">
+                        <h3>Web Development</h3>
+                        <div class="icon-container">
+                            <div class="icon">
+                                <img src="./imgs/html-icon.svg" alt="HTML" width="50px">
+                                <p>HTML</p>
+                            </div>
+                            <div class="icon">
+                                <img src="./imgs/css-icon.svg" alt="CSS" width="50px">
+                                <p>CSS</p>
+                            </div>
+                            <div class="icon">
+                                <img src="./imgs/javascript-programming-language-icon.svg" alt="JavaScript"
+                                    width="50px">
+                                <p>JavaScript</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skills-container">
+                        <h3>Programming</h3>
+                        <div class="icon-container">
+                            <div class="icon">
+                                <img src="./imgs/c-plus-plus-programming-language-icon.svg" alt="C++" width="50px">
+                                <p>C++</p>
+                            </div>
+                            <div class="icon">
+                                <img src="./imgs/java-programming-language-icon.svg" alt="Java" width="50px">
+                                <p>Java</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Projects Section -->
+    <div class="projects">
+        <h1>Projects</h1>
+        <div class="project-container-container">
+            <div class="project-container">
+                <img src="./imgs/church-website.png" alt="Church Website">
+                <h4>Church Website</h4>
+                <p>Built a website for my church to easily access information, events, links, but also to reach those
+                    who are in
+                    search
+                    for a church.</p>
+                <div class="project-icon-container">
+                    <div class="project-icon">
+                        <img src="imgs/html-icon.svg" alt="HTML5 Icon">
+                        <p>HTML5</p>
+                    </div>
+                    <div class="project-icon">
+                        <img src="imgs/css-icon.svg" alt="CSS5 Icon">
+                        <p>CSS5</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project-container">
+                <img src="./imgs/personal-website.png" alt="Personal Website">
+                <h4>Personal Website</h4>
+                <p>Built a website that you are currently browsing! The purpose of this website is to showcase my
+                    portfolio,
+                    and
+                    share a little bit about who I am!</p>
+                <div class="project-icon-container">
+                    <div class="project-icon">
+                        <img src="./imgs/html-icon.svg" alt="HTML5 Icon">
+                        <p>HTML5</p>
+                    </div>
+                    <div class="project-icon">
+                        <img src="./imgs/css-icon.svg" alt="CSS5 Icon">
+                        <p>CSS5</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <nav>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/jessica-wong-ba51ab258/" target="_blank">
+                    <img src="./imgs/linkedin.png" alt="LinkedIn">
+                </a>
+                <a href="https://github.com/jess-icaww" target="_blank">
+                    <img src="./imgs/github.png" alt="GitHub">
+                </a>
+            </div>
+            <p>&#169; 2025 Jessica Wong. All Rights Reserved.</p>
+        </nav>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

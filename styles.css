@@ -11,46 +11,46 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: "Inter", sans-serif;
-    color: #2d0e11;
-    background-color: #f6ebec;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  font-family: "Inter", sans-serif;
+  color: #2d0e11;
+  background-color: #f6ebec;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  .highlighted {
-    position: relative;
-    display: inline-block;
-    font-size: 1.3rem;
-    font-weight: 500;
-    color: #333;
-  }
-  
-  .highlighted::after {
-    content: "";
-    position: absolute;
+.highlighted {
+  position: relative;
+  display: inline-block;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.highlighted::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  background-color: #f39c12; /* Underline color */
+  bottom: 0;
+  left: 0;
+  animation: underlineAnimation 1s forwards;
+}
+
+@keyframes underlineAnimation {
+  0% {
     width: 0;
-    height: 3px;
-    background-color: #f39c12; /* Underline color */
-    bottom: 0;
-    left: 0;
-    animation: underlineAnimation 1s forwards;
   }
-  
-  @keyframes underlineAnimation {
-    0% {
-      width: 0;
-    }
-    100% {
-      width: 100%; /* Full width of the text */
-    }
+  100% {
+    width: 100%; /* Full width of the text */
   }
-  
+}
 
 h1,
 h2,
@@ -174,12 +174,15 @@ a:hover {
 }
 
 .hero-container button {
-  padding: 12px 24px;
+  padding: 15px 50px;
   background-color: #2d0e11;
   color: white;
   border: none;
   border-radius: 2rem;
   font-weight: 600;
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  margin-top: 4px;
   transition: background 0.3s ease;
 }
 
@@ -241,7 +244,7 @@ a:hover {
 }
 
 .about-me h1 {
-  margin-top: 4rem;
+  margin-top: 3rem;
   text-decoration: underline;
   text-underline-offset: 1rem;
   letter-spacing: 2px;
@@ -374,44 +377,110 @@ a:hover {
   text-align: center;
   text-decoration: underline;
   letter-spacing: 3px;
-  margin-top: 4rem;
+  margin-top: 3rem;
 }
 
 .skills-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  position: relative;
   width: 500px;
   height: 300px;
+  box-sizing: border-box;
+  border: solid 3px;
+  background-color: #f6ebec;
+  margin: 0.4px;
+  overflow: hidden;
+  padding: 60px 80px;
 }
 
 .skills-container h3 {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s forwards;
   font-size: 2.5rem;
+  text-align: center;
+}
+
+.skills-container::before,
+.skills-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 80px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.skills-container::before {
+  left: 0;
+  background: linear-gradient(to right, #f6ebec 0%, transparent 100%);
+}
+
+.skills-container::after {
+  right: 0;
+  background: linear-gradient(to left, #f6ebec 0%, transparent 100%);
+}
+
+.skills img {
+  height: 50px;
+  width: 50px;
+  margin: 20px 20px;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .skills-container-container {
   display: flex;
   justify-content: center;
   margin: 2em;
+  margin-bottom: 4rem;
 }
 
 #davinci {
   transform: scale(1.2);
 }
 
-.icon-container {
-  display: flex;
-  text-align: center;
-  flex-wrap: wrap;
-  gap: 50px;
-  margin: 30px;
+#bootstrap{
+    transform: scale(1.2);
 }
 
-.icon {
+.icon-slide {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  animation: 8s slide linear infinite;
+  width: max-content;
+  z-index: 1;
+  gap: 15px;
+}
+
+.slider-track {
+  display: flex;
+  z-index: 1;
+  white-space: nowrap;
+}
+
+.slider-track:hover .icon-slide {
+  animation-play-state: paused;
 }
 
 .icon:hover {
@@ -424,10 +493,23 @@ a:hover {
   margin-bottom: 5px;
 }
 
+.icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .icon p {
   max-width: 200px;
-  font-size: 20px;
+  font-size: 15px;
   word-wrap: break-word;
+}
+
+.icon-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 }
 
 /* Project Section */
@@ -437,7 +519,7 @@ a:hover {
   justify-content: center;
   align-items: center;
   border-top: solid;
-  height: 80vh;
+  margin-bottom: 1rem;
 }
 
 .project-container {
@@ -448,10 +530,6 @@ a:hover {
   padding: 20px;
   border-radius: 8px;
   transition: transform 0.3 ease-in-out;
-}
-
-.project-container:hover {
-  transform: scale(1.3);
 }
 
 .project-container-container {
@@ -465,7 +543,7 @@ a:hover {
   text-decoration: underline;
   text-underline-offset: 1rem;
   margin-bottom: 2em;
-  margin-top: 4rem;
+  margin-top: 3rem;
   letter-spacing: 2px;
 }
 
@@ -491,15 +569,38 @@ a:hover {
 
 .project-icon {
   display: flex;
-  width: 30px;
-  height: 30px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  width: 20px;
+  height: 20px;
   gap: 5px;
 }
 
 .project-icon-container {
-  display: flex;
-  gap: 70px;
+    display: flex;
+    justify-content: space-evenly;
+  background-color: red;
+  width: 300px;
 }
+
+.project-container-container button {
+    padding: 10px 25px;
+    background-color: #2d0e11;
+    color: white;
+    border: none;
+    border-radius: 2rem;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    margin-top: 2px;
+    transition: background 0.3s ease;
+  }
+  
+  .project-container-container button:hover {
+    background-color: #5a1f1d;
+    cursor: pointer;
+  }
 
 /* Footer Section */
 footer {

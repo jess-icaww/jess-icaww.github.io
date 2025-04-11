@@ -927,24 +927,15 @@ footer p {
   }
 
   /* Cards section */
-    .box-area {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    
-    .card-container {
-      width: 45%;
-      max-width: none;
-    }
-    
-    .box {
-      width: 100%;
-    }
-    
-    .card-area h2 {
-      font-size: 2.2em; /* Slightly smaller heading */
-    }
+.card-area {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.card-container {
+  width: 75%;
+}
 
   /* Skills section */
   .skills-container-container {
@@ -997,9 +988,8 @@ footer p {
     font-size: 0.9rem;
   }
   
-  /* Fix for mobile menu */
   .mobile-links {
-    width: 200px;
+    width: 100px;
     right: 10px;
   }
   
@@ -1007,4 +997,16 @@ footer p {
     font-size: 1.2rem;
     padding: 12px;
   }
-}
+
+  footer nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 80px;
+    padding: 20px 0;
+  }
+  
+  footer p {
+    font-size: 0.7rem;
+  }
+  

@@ -61,14 +61,6 @@ body {
   font-size: 1.2rem;
 }
 
-.highlighted {
-  position: relative;
-  display: inline-block;
-  font-size: 1.3rem;
-  font-weight: 500;
-  color: #333;
-}
-
 h1,
 h2,
 h3 {
@@ -253,6 +245,14 @@ a:hover {
   text-decoration: underline;
   text-underline-offset: 1rem;
   letter-spacing: 2px;
+}
+
+.highlighted {
+  position: relative;
+  display: inline-block;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #333;
 }
 
 .highlighted::after {
@@ -692,7 +692,6 @@ footer p {
   }
   
   /* Skills section */
-/* Add this to your CSS file */
 
 /* Default (desktop) layout - keep your existing layout */
 .skills-container-container {
@@ -901,20 +900,52 @@ footer p {
 
   .about-me-text {
     font-size: 1rem;
-    padding: 0 1rem;
+    padding: 0 0.1em;
   }
 
   .highlighted {
-    display: inline-block;
     position: relative;
+    display: inline-block;
     font-size: 1rem;
-    font-weight: 500;
+  }
+  
+  .highlighted::after {
+    content: "";
+    position: absolute;
+    background-color: #f39c12; /* Underline color */
+    font-size: 1rem;
+    animation: underlineAnimation 1s forwards;
+  }
+  
+  @keyframes underlineAnimation {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%; /* Full width of the text */
+    }
   }
 
-  .highlighted::after {
-    width: 2px;
-    animation: underlineAnimation 0.5s forward;
-  }
+  /* Cards section */
+    .box-area {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      max-width: 450px; /* Adjust the maximum width */
+    }
+    
+    .card-container {
+      max-width: 100%;
+    }
+    
+    .box {
+      max-width: 180px; /* Make the boxes slightly smaller */
+    }
+    
+    .card-area h2 {
+      font-size: 2.2em; /* Slightly smaller heading */
+    }
 
   /* Skills section */
   .skills-container {

@@ -929,18 +929,17 @@ footer p {
   /* Cards section */
     .box-area {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
-      gap: 20px;
-      max-width: 450px; /* Adjust the maximum width */
+      flex-wrap: wrap;
     }
     
     .card-container {
-      max-width: 100%;
+      width: 45%;
+      max-width: none;
     }
     
     .box {
-      max-width: 180px; /* Make the boxes slightly smaller */
+      width: 100%;
     }
     
     .card-area h2 {
@@ -948,22 +947,46 @@ footer p {
     }
 
   /* Skills section */
+  .skills-container-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem; /* space between left and right sides */
+    padding: 1rem;
+  }
+
+  .left-side,
+  .right-side {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centers the skill quadrants inside */
+    gap: 1.5rem; /* space between individual skill items */
+  }
+
   .skills-container {
-    padding: 20px;
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 1rem;
+    box-sizing: border-box;
   }
-  
+
   .skills-container h3 {
-    font-size: 1.8rem;
+    font-size: 2rem;
+    text-align: center;
   }
-  
-  .icon img {
-    width: 40px;
-    height: 40px;
+
+  .skills-container ul {
+    padding-left: 0;
+    text-align: center;
   }
-  
-  .icon p {
-    font-size: 12px;
+
+  .skills-container li {
+    font-size: 1rem;
   }
+
+}
   
   /* Project section */
   .projects h4 {

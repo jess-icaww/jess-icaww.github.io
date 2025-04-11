@@ -232,12 +232,13 @@ a:hover {
   gap: 2rem;
   height: auto;
   border-top: solid;
+  margin-bottom: 1.4rem;
 }
 
 .about-me-text {
   text-align: center;
   font-size: 1.3rem;
-  max-width: 800px;
+  width: 50%;
 }
 
 .about-me h1 {
@@ -250,8 +251,8 @@ a:hover {
 .highlighted {
   position: relative;
   display: inline-block;
-  font-size: 1.3rem;
-  font-weight: 500;
+  font-size: 1.5rem;
+  font-weight: bold;
   color: #333;
 }
 
@@ -906,15 +907,14 @@ footer p {
   .highlighted {
     position: relative;
     display: inline-block;
-    font-size: 1rem;
+    font-size: 1.4rem;
   }
   
   .highlighted::after {
     content: "";
     position: absolute;
-    background-color: #f39c12; /* Underline color */
     font-size: 1rem;
-    animation: underlineAnimation 1s forwards;
+    display: none;
   }
   
   @keyframes underlineAnimation {

@@ -20,3 +20,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         target.scrollIntoView({ behavior: 'smooth' });
     });
 });
+
+function toggleMenu() {
+    document.querySelector('.mobile-links').classList.toggle('open');
+}
